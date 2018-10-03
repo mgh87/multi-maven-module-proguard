@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>at.splendit</groupId>
 		<artifactId>maven.proguard.parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.1.0</version>
 	</parent>
 
 	<artifactId>maven.proguard.core</artifactId>
@@ -18,9 +18,5 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
 	</dependencies>
 </project>
