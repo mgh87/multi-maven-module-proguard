@@ -2,10 +2,6 @@ package at.splendit.executer;
 
 import at.splendit.core.ClassNameUtil;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )

@@ -17,10 +17,6 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>at.splendit</groupId>
 			<artifactId>maven.proguard.core</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
