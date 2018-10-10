@@ -19,4 +19,25 @@
 	</properties>
 	<dependencies>
 	</dependencies>
+	<profiles>
+		<profile>
+			<id>proguard</id>
+			<activation>
+				<property>
+					<name>proguard</name>
+				</property>
+				<file>
+					<exists>${basedir}/proguard.conf</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.github.wvengen</groupId>
+						<artifactId>proguard-maven-plugin</artifactId>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
