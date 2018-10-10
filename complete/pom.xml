@@ -56,6 +56,18 @@
 							<scope>runtime</scope>
 						</dependency>
 					</dependencies>
+					<configuration>
+						<obfuscate>true</obfuscate>
+						<proguardInclude>${basedir}/proguard.conf</proguardInclude>
+						<libs>
+							<lib>${java.home}/lib/rt.jar</lib>
+							<lib>${java.home}/lib/jsse.jar</lib>
+						</libs>
+						<options>
+							<option>-dontshrink</option>
+							<option>-dontoptimize</option>
+						</options>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
