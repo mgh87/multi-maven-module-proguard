@@ -13,6 +13,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<modules>
@@ -30,4 +32,57 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<build>
+		<pluginManagement>
+			<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<executions>
+					<execution>
+					<phase>verify</phase>
+						<goals>
+							<goal>java</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+				<plugin>
+					<groupId>com.github.wvengen</groupId>
+					<artifactId>proguard-maven-plugin</artifactId>
+					<version>2.0.14</version>
+					<executions>
+						<execution>
+							<phase>package</phase>
+							<goals>
+								<goal>proguard</goal>
+							</goals>
+						</execution>
+					</executions>
+					<dependencies>
+						<!-- used obfuscation library -->
+						<dependency>
+							<groupId>net.sf.proguard</groupId>
+							<artifactId>proguard-base</artifactId>
+							<version>6.0.1</version>
+							<scope>runtime</scope>
+						</dependency>
+					</dependencies>
+					<configuration>
+						<obfuscate>true</obfuscate>
+						<proguardInclude>${basedir}/proguard.conf</proguardInclude>
+						<libs>
+							<lib>${java.home}/lib/rt.jar</lib>
+							<lib>${java.home}/lib/jsse.jar</lib>
+						</libs>
+						<options>
+							<option>-dontshrink</option>
+							<option>-dontoptimize</option>
+						</options>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
