@@ -14,6 +14,10 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<extra.options>
+			-applymapping
+			${project.basedir}/../maven.proguard.core/target/core.out
+		</extra.options>
 	</properties>
 	<dependencies>
 		<dependency>

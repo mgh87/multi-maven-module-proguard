@@ -16,6 +16,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<extra.options>
+			-printmapping ${project.build.directory}/core.out
+		</extra.options>
 	</properties>
 	<dependencies>
 	</dependencies>
