@@ -1,17 +1,25 @@
 package at.splendit.executer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import at.splendit.core.ClassNameUtil;
 
 public class App {
+	private static final Logger logger = LoggerFactory.getLogger(App.class); 
+	
+	
 	public static void main(String[] args) {
-		System.out.println("Multi-maven-proguard showcase");
-		System.out.println("-----------------------------");
-		System.out.println("execute: ClassNameUtil.returnClassName()");
-		System.out.println(ClassNameUtil.returnClassName());
-		System.out.println("-----------------------------");
-		System.out.println("execute: ClassNameUtil.ofuscatedMethodWrapper()");
-		System.out.println(ClassNameUtil.ofuscatedMethodWrapper());
-		System.out.println("-----------------------------");
+		logger.info("------------------------------------------------------------------------");
+		logger.info("Multi-maven-proguard showcase");
+		logger.info("");
+		logger.info("execute: ClassNameUtil.returnClassName()");
+		logger.info(ClassNameUtil.returnClassName());
+		logger.info("");
+		logger.info("execute: ClassNameUtil.ofuscatedMethodWrapper()");
+		logger.info(ClassNameUtil.ofuscatedMethodWrapper());
+		logger.info("");
+		logger.info("------------------------------------------------------------------------");
 
 	}
 }
