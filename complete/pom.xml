@@ -15,6 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<extra.option>#empty option fails proguard build</extra.option>
 	</properties>
 
 	<modules>
@@ -72,6 +73,9 @@
 					<configuration>
 						<obfuscate>true</obfuscate>
 						<proguardInclude>${basedir}/proguard.conf</proguardInclude>
+						<attach>true</attach>
+						<attachArtifactClassifier>pg</attachArtifactClassifier>
+						<outjar>${project.build.finalName}-pg.jar</outjar>
 						<libs>
 							<lib>${java.home}/lib/rt.jar</lib>
 							<lib>${java.home}/lib/jsse.jar</lib>
@@ -79,6 +83,8 @@
 						<options>
 							<option>-dontshrink</option>
 							<option>-dontoptimize</option>
+							<option>${extra.options}</option>
+							<option>-printconfiguration ${project.build.directory}/${project.artifactId}.conf</option>
 						</options>
 					</configuration>
 				</plugin>
