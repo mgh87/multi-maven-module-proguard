@@ -22,4 +22,15 @@
 			<version>0.1.0</version>
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>at.splendit.executer.App</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
