@@ -36,19 +36,6 @@
 	<build>
 		<pluginManagement>
 			<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.6.0</version>
-				<executions>
-					<execution>
-					<phase>verify</phase>
-						<goals>
-							<goal>java</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
 				<plugin>
 					<groupId>com.github.wvengen</groupId>
 					<artifactId>proguard-maven-plugin</artifactId>
@@ -84,7 +71,8 @@
 							<option>-dontshrink</option>
 							<option>-dontoptimize</option>
 							<option>${extra.options}</option>
-							<option>-printconfiguration ${project.build.directory}/${project.artifactId}.conf</option>
+							<option>-printconfiguration
+								${project.build.directory}/${project.artifactId}.conf</option>
 						</options>
 					</configuration>
 				</plugin>
