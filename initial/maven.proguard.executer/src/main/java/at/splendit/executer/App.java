@@ -17,7 +17,7 @@ public class App {
 		logger.info(ClassNameUtil.returnClassName());
 		logger.info("");
 		logger.info("execute: ClassNameUtil.ofuscatedMethodWrapper()");
-		logger.info(ClassNameUtil.ofuscatedMethodWrapper());
+		logger.info(ClassNameUtil.obfuscatedMethodWrapper());
 		logger.info("");
 		logger.info("------------------------------------------------------------------------");
 

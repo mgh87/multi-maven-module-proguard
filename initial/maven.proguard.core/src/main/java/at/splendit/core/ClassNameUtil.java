@@ -10,7 +10,7 @@ public class ClassNameUtil {
 		return ClassNameUtil.class.getName();
 	}
 
-	public static final String ofuscatedMethodWrapper() {
+	public static final String obfuscatedMethodWrapper() {
 		return obfuscatedMethod();
 	}
 
