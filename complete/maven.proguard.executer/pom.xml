@@ -91,7 +91,7 @@
 							</execution>
 						</executions>
 						<configuration>
-							<executable>${project.basedir}/proguard.sh</executable>
+							<executable>${project.basedir}/proguard.${proguard}</executable>
 						</configuration>
 					</plugin>
 					<plugin>
